@@ -6,7 +6,7 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 01:37:26 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/04/07 17:27:13 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/07 20:12:37 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ static int	parse_scene(int fd, t_scene *scene)
 		free(line);
 		if (!ret)
 			return (0);
+		ret = get_next_line(fd, &line);
 	}
 	if (ret == -1)
 		return (syscall_err("get_next_line()"));
