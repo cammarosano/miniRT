@@ -6,13 +6,13 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 00:41:43 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/03/29 18:36:55 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/07 18:32:37 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minirt_bonus.h"
 
-int			render_to_bmp(int argc, char **argv)
+int	render_to_bmp(int argc, char **argv)
 {
 	t_scene	scene;
 	t_img	img;
@@ -56,7 +56,7 @@ static int	print_help(void)
 	return (0);
 }
 
-int			main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	if (argc == 1)
 	{

@@ -6,7 +6,7 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 14:06:00 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/03/29 14:19:49 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/07 18:23:46 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	*render_block(void *arg)
 	int				x;
 	int				y;
 	t_vect			color;
-	static t_vect	(*sampling[2])(int, int, t_camera *, t_scene *) = {
+	static	t_vect	(*sampling[2])(int, int, t_camera *, t_scene *) = {
 				single_sample, adapt_super_sample};
 
 	v = arg;
@@ -39,7 +39,7 @@ static void	*render_block(void *arg)
 
 static void	replicate_args_array(t_mthread_arg *v, int step)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	while (i < N_THREADS)
@@ -77,7 +77,7 @@ static void	setup_cam(t_camera *cam, t_resol res)
 	cam->half_s = tan(deg_to_rad(cam->fov) * 0.5) / res.width;
 }
 
-void		render(t_camera *camera, t_img *img, t_scene *scene,
+void	render(t_camera *camera, t_img *img, t_scene *scene,
 				void (*put_pixel)(t_img *, int, int, int))
 {
 	pthread_t		thread_ids[N_THREADS];

@@ -6,7 +6,7 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 02:30:52 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/04/07 18:16:11 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/07 18:37:05 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** if a is positive, sol[0] stores the smallest solution
 */
 
-static int		solve_2dg_equation(double a, double b, double c, double *sol)
+static int	solve_2dg_equation(double a, double b, double c, double *sol)
 {
 	double	discriminant;
 
@@ -41,7 +41,7 @@ static int		solve_2dg_equation(double a, double b, double c, double *sol)
 ** 		c = <CO,CO> - r^2
 */
 
-double			intercept_sphere(t_vect origin, t_vect direction, void *s,
+double	intercept_sphere(t_vect origin, t_vect direction, void *s,
 									double min)
 {
 	t_vect	c_o;
@@ -69,7 +69,7 @@ double			intercept_sphere(t_vect origin, t_vect direction, void *s,
 ** "e" defined as Po - cyl.center
 */
 
-static int		solve_inf_cyl(t_vect p0, t_vect line_d, t_cylinder cyl,
+static int	solve_inf_cyl(t_vect p0, t_vect line_d, t_cylinder cyl,
 								double *sol)
 {
 	double	a;
@@ -108,7 +108,7 @@ static double	interc_height(t_vect p0, double t, t_vect dir, t_cylinder cyl)
 ** interception points lie between the height constraints.
 */
 
-double			intercept_cylinder(t_vect origin, t_vect dir, void *shape,
+double	intercept_cylinder(t_vect origin, t_vect dir, void *shape,
 									double min)
 {
 	double		half_height;

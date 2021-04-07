@@ -6,7 +6,7 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 03:07:30 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/03/29 15:52:44 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/07 18:31:55 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ static void	define_obj_light_specs(t_hit_point *hp, t_obj *obj)
 ** Returns the visible surface normal vector
 */
 
-t_vect		surface_normal(t_obj *obj, t_vect point, t_vect view_ray)
+t_vect	surface_normal(t_obj *obj, t_vect point, t_vect view_ray)
 {
 	t_vect			normal;
-	static t_vect	(*f[6])(void *, t_vect) = {normal_sphere, normal_plane,
+	static	t_vect	(*f[6])(void *, t_vect) = {normal_sphere, normal_plane,
 						normal_square, normal_triangle, normal_cylinder,
 						normal_disc};
 
@@ -48,9 +48,9 @@ t_vect		surface_normal(t_obj *obj, t_vect point, t_vect view_ray)
 ** intersection.
 */
 
-double		intercept_obj(t_vect origin, t_vect dir, t_obj *obj, double min)
+double	intercept_obj(t_vect origin, t_vect dir, t_obj *obj, double min)
 {
-	static double	(*f[6])(t_vect, t_vect, void *, double) = {intercept_sphere,
+	static	double	(*f[6])(t_vect, t_vect, void *, double) = {intercept_sphere,
 	intercept_plane, intercept_square, intercept_triangle, intercept_cylinder,
 	intercept_disc};
 
@@ -63,7 +63,7 @@ double		intercept_obj(t_vect origin, t_vect dir, t_obj *obj, double min)
 ** intersected object's attributes to hit_point.
 */
 
-int			check_interception(t_vect origin, t_vect dir, t_list *obj_list,
+int	check_interception(t_vect origin, t_vect dir, t_list *obj_list,
 								t_hit_point *hp)
 {
 	double	t;

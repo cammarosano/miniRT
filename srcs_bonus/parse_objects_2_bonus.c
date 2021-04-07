@@ -6,7 +6,7 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 14:05:23 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/03/29 15:55:06 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/07 18:28:01 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	load_uv_coords_sq(t_square *sq)
 	sq->v = v_normalize(v);
 }
 
-int			parse_square(char **words, t_scene *scene, int line_num)
+int	parse_square(char **words, t_scene *scene, int line_num)
 {
 	t_obj		obj;
 	t_square	sq;
@@ -54,7 +54,7 @@ int			parse_square(char **words, t_scene *scene, int line_num)
 	return (1);
 }
 
-int			parse_cube(char **words, t_scene *scene, int line)
+int	parse_cube(char **words, t_scene *scene, int line)
 {
 	t_obj		obj;
 	t_square	cube;
@@ -80,7 +80,7 @@ int			parse_cube(char **words, t_scene *scene, int line)
 	return (1);
 }
 
-int			parse_pyramid(char **words, t_scene *scene, int line)
+int	parse_pyramid(char **words, t_scene *scene, int line)
 {
 	t_obj		obj;
 	t_square	base;

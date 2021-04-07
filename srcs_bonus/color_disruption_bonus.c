@@ -6,7 +6,7 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 14:03:50 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/03/29 19:01:23 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/07 18:32:13 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #define ND_FACTOR 0.2
 #define DIST_FACTOR 3
 
-t_vect		normal_disruption(t_vect normal, t_obj *obj, t_vect point)
+t_vect	normal_disruption(t_vect normal, t_obj *obj, t_vect point)
 {
 	double	dist;
 	t_vect	center;
@@ -54,7 +54,7 @@ static int	is_black(t_vect u, t_vect v, t_vect cp, double size)
 	return (res);
 }
 
-int			checker_board(t_obj *obj, t_vect point)
+int	checker_board(t_obj *obj, t_vect point)
 {
 	double	size;
 	t_vect	u;
@@ -81,7 +81,7 @@ int			checker_board(t_obj *obj, t_vect point)
 	return (is_black(u, v, cp, size));
 }
 
-t_vect		rainbow(t_vect normal)
+t_vect	rainbow(t_vect normal)
 {
 	t_vect	color;
 

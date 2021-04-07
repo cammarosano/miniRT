@@ -6,19 +6,19 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 00:09:15 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/04/07 17:12:18 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/07 18:36:20 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minirt_bonus.h"
 
-int			red_cross(t_vars *vars)
+int	red_cross(t_vars *vars)
 {
 	close_program(vars, 0);
 	return (1);
 }
 
-void		update_img(t_vars *vars, t_camera *cam)
+void	update_img(t_vars *vars, t_camera *cam)
 {
 	t_img	img;
 
@@ -38,11 +38,11 @@ static void	cam_rotation_mouse(int x, int y, t_vars *vars)
 	new_dir = calc_vector_dir(x, y, cam, vars->scene->res);
 	cam->dir = new_dir;
 	ft_printf("New camera orientation: %.1f,%.1f,%.1f\n", new_dir.x, new_dir.y,
-				new_dir.z);
+		new_dir.z);
 	update_img(vars, cam);
 }
 
-int			mouse_hook(int button, int x, int y, t_vars *vars)
+int	mouse_hook(int button, int x, int y, t_vars *vars)
 {
 	if (button == 3)
 		cam_rotation_mouse(x, y, vars);

@@ -6,7 +6,7 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 14:05:15 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/03/29 14:33:06 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/07 18:26:28 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static void	set_defaults(t_obj *obj)
 	obj->rainbow = 0;
 }
 
-void		parse_extras(char **words, t_obj *obj)
+void	parse_extras(char **words, t_obj *obj)
 {
 	set_defaults(obj);
 	while (*words && **words != '#')

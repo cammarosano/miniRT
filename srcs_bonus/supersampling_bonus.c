@@ -6,7 +6,7 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 14:06:52 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/03/29 19:16:02 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/07 18:26:14 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static t_vect	sample_16(int x, int y, t_camera *cam, t_scene *scene)
 		while (j < 4)
 		{
 			ray = calc_vector_dir_fl(x + delta[i], y + delta[j], cam,
-										scene->res);
+					scene->res);
 			color = v_add(color, cast_ray(cam->position, ray, scene, BOUNCES));
 			j++;
 		}
@@ -93,7 +93,7 @@ static t_vect	average_color(t_vect *color)
 ** If yes, proceed to sample 16 points.
 */
 
-t_vect			adapt_super_sample(int x, int y, t_camera *cam, t_scene *scene)
+t_vect	adapt_super_sample(int x, int y, t_camera *cam, t_scene *scene)
 {
 	t_vect	color[4];
 	t_vect	ray;

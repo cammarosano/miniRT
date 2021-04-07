@@ -6,7 +6,7 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 14:00:03 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/03/29 16:06:43 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/07 18:32:26 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	check_point_in_disc(t_vect point, t_disc *ds)
 	return (0);
 }
 
-double		intercept_disc(t_vect origin, t_vect dir, void *shape, double min)
+double	intercept_disc(t_vect origin, t_vect dir, void *shape, double min)
 {
 	t_plane	pl;
 	t_disc	*ds;
@@ -43,7 +43,7 @@ double		intercept_disc(t_vect origin, t_vect dir, void *shape, double min)
 	return (inf);
 }
 
-t_vect		normal_disc(void *shape, t_vect point)
+t_vect	normal_disc(void *shape, t_vect point)
 {
 	t_disc	*ds;
 

@@ -6,7 +6,7 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 01:55:22 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/04/07 17:11:19 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/07 18:25:41 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void	initialize_vars(t_vars *vars, t_scene *scene)
 static void	create_window(t_vars *vars, t_resol res)
 {
 	vars->win_ptr = mlx_new_window(vars->mlx_ptr, res.width, res.height,
-									"miniRT");
+			"miniRT");
 	if (!vars->win_ptr)
 	{
 		ft_putendl_fd(
@@ -43,7 +43,7 @@ static void	create_window(t_vars *vars, t_resol res)
 	}
 }
 
-void		display_instructions(void)
+void	display_instructions(void)
 {
 	ft_putendl_fd("Interaction with the image window:", 1);
 	ft_putendl_fd("Press keys N and P to select next/previous camera", 1);
@@ -51,7 +51,7 @@ void		display_instructions(void)
 	ft_putendl_fd("Mouse: point and right click to rotate camera", 1);
 }
 
-void		render_to_window(char *file_name)
+void	render_to_window(char *file_name)
 {
 	t_scene	scene;
 	t_vars	vars;
@@ -66,7 +66,7 @@ void		render_to_window(char *file_name)
 		close_program(&vars, 1);
 	create_window(&vars, scene.res);
 	mlx_put_image_to_window(vars.mlx_ptr, vars.win_ptr, first_img.img_ptr,
-							0, 0);
+		0, 0);
 	if (!render_all_cams(first_img.img_ptr, &scene, vars.mlx_ptr))
 		close_program(&vars, 1);
 	mlx_hook(vars.win_ptr, 33, (1L << 17), red_cross, &vars);

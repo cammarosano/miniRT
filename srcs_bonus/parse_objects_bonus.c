@@ -6,13 +6,13 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 01:25:27 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/04/07 18:13:53 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/07 18:36:39 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minirt_bonus.h"
 
-int			parse_sphere(char **words, t_scene *scene, int line_num)
+int	parse_sphere(char **words, t_scene *scene, int line_num)
 {
 	int			ret;
 	t_sphere	sp;
@@ -53,7 +53,7 @@ static void	load_uv_coords_pl(t_plane *pl)
 	pl->v = v_normalize(v);
 }
 
-int			parse_plane(char **words, t_scene *scene, int line_num)
+int	parse_plane(char **words, t_scene *scene, int line_num)
 {
 	t_plane	pl;
 	t_obj	obj;
@@ -75,7 +75,7 @@ int			parse_plane(char **words, t_scene *scene, int line_num)
 	return (1);
 }
 
-int			parse_triangle(char **words, t_scene *scene, int line_num)
+int	parse_triangle(char **words, t_scene *scene, int line_num)
 {
 	t_obj		obj;
 	t_triangle	tr;
@@ -96,7 +96,7 @@ int			parse_triangle(char **words, t_scene *scene, int line_num)
 	return (1);
 }
 
-int			parse_cylinder(char **words, t_scene *scene, int line_num)
+int	parse_cylinder(char **words, t_scene *scene, int line_num)
 {
 	t_obj		obj;
 	t_cylinder	cyl;

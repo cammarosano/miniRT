@@ -6,13 +6,13 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 13:57:59 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/03/29 14:18:52 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/07 18:23:02 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minirt_bonus.h"
 
-static int			add_6_squares(t_list **lst, t_obj obj, t_square *face)
+static int	add_6_squares(t_list **lst, t_obj obj, t_square *face)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ static int			add_6_squares(t_list **lst, t_obj obj, t_square *face)
 	return (1);
 }
 
-int					add_cube(t_list **lst, t_obj obj, t_square csq)
+int	add_cube(t_list **lst, t_obj obj, t_square csq)
 {
 	t_square	face[6];
 	int			i;
@@ -49,13 +49,13 @@ int					add_cube(t_list **lst, t_obj obj, t_square csq)
 			face[i].v = face[i - 1].v;
 		}
 		face[i].center = v_add(csq.center,
-								v_scale(csq.side / 2, face[i].normal));
+				v_scale(csq.side / 2, face[i].normal));
 		i++;
 	}
 	return (add_6_squares(lst, obj, face));
 }
 
-static void			get_base_points(t_square base, t_vect *vertex)
+static void	get_base_points(t_square base, t_vect *vertex)
 {
 	t_vect	u;
 	t_vect	v;
@@ -83,8 +83,7 @@ static t_triangle	get_triangle(t_vect *vertex, t_vect top, int i)
 	return (tr);
 }
 
-int					add_pyramid(t_list **lst, t_obj obj, t_square base,
-								double height)
+int	add_pyramid(t_list **lst, t_obj obj, t_square base, double height)
 {
 	t_vect		vertex[4];
 	t_triangle	tr;

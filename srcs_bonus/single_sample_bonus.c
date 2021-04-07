@@ -6,7 +6,7 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 14:06:31 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/03/29 14:06:32 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/07 18:34:36 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ t_vect	cast_ray(t_vect origin, t_vect dir, t_scene *scene, int bounces)
 	if (!bounces || hit_point.reflect < EPSILON)
 		return (local_color);
 	reflected_color = cast_ray(hit_point.point,
-				reflected(dir, hit_point.surf_normal), scene, bounces - 1);
+			reflected(dir, hit_point.surf_normal), scene, bounces - 1);
 	return (v_add(v_scale(1 - hit_point.reflect, local_color),
-					v_scale(hit_point.reflect, reflected_color)));
+			v_scale(hit_point.reflect, reflected_color)));
 }
 
 /*

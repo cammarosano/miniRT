@@ -6,7 +6,7 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 14:06:35 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/03/29 15:52:01 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/07 18:27:38 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ t_vect	night_sky(t_vect ray, t_scene *scene)
 	double	g;
 	double	b;
 
-	if ((int)((ray.x * ray.y * ray.z) * 10e09) %
-		(40 * (1 + 500 * !scene->res.antialias)) == 0)
+	if ((int)((ray.x * ray.y * ray.z) * 10e09)
+		% (40 * (1 + 500 * !scene->res.antialias)) == 0)
 		return (v_scale(fabs(ray.y), vector(1, 1, 1)));
 	if (ray.z < 0)
 		return (vector(0, 0, 0));
