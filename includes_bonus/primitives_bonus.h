@@ -6,7 +6,7 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 14:08:38 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/03/29 16:11:53 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/07 18:54:32 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "linalg_bonus.h"
 
-typedef struct	s_object
+typedef struct s_object
 {
 	int			type;
 	t_vect		color;
@@ -28,7 +28,7 @@ typedef struct	s_object
 	int			rainbow;
 }				t_obj;
 
-enum			e_object_types
+enum	e_object_types
 {
 	sphere = 0,
 	plane,
@@ -38,13 +38,13 @@ enum			e_object_types
 	disc
 };
 
-typedef struct	s_sphere
+typedef struct s_sphere
 {
 	t_vect		center;
 	double		radius;
 }				t_sphere;
 
-typedef struct	s_plane
+typedef struct s_plane
 {
 	t_vect		point;
 	t_vect		normal;
@@ -52,7 +52,7 @@ typedef struct	s_plane
 	t_vect		v;
 }				t_plane;
 
-typedef struct	s_triangle
+typedef struct s_triangle
 {
 	t_vect		a;
 	t_vect		b;
@@ -60,7 +60,7 @@ typedef struct	s_triangle
 	t_vect		normal;
 }				t_triangle;
 
-typedef struct	s_square
+typedef struct s_square
 {
 	t_vect		center;
 	t_vect		normal;
@@ -69,7 +69,7 @@ typedef struct	s_square
 	t_vect		v;
 }				t_square;
 
-typedef struct	s_cylinder
+typedef struct s_cylinder
 {
 	t_vect		center;
 	t_vect		dir;
@@ -77,7 +77,7 @@ typedef struct	s_cylinder
 	double		height;
 }				t_cylinder;
 
-typedef struct	s_disc
+typedef struct s_disc
 {
 	t_vect		center;
 	t_vect		normal;
