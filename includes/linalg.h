@@ -6,7 +6,7 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 14:10:37 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/03/23 14:12:04 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/07 18:41:55 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <math.h>
 
-typedef struct	s_vector
+typedef struct s_vector
 {
 	double	x;
 	double	y;
