@@ -6,7 +6,7 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 16:51:35 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/04/07 18:46:51 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/08 13:14:22 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "parser.h"
 
-# define SPEC_REFL_COEF 0.15
+# define SPEC_REFL_COEF 0.1
 
 typedef struct s_img
 {

@@ -6,7 +6,7 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 14:04:40 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/04/07 18:43:42 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/08 13:17:29 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 # include "libft.h"
 
 # define SP_SHINE 800
-# define PL_SHINE 4
-# define SQ_SHINE 50
-# define TR_SHINE 50
-# define CYL_SHINE 50
+# define PL_SHINE 2
+# define SQ_SHINE 2
+# define TR_SHINE 2
+# define CYL_SHINE 2
 
 typedef struct s_resol
 {
