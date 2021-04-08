@@ -6,7 +6,7 @@
 /*   By: rcammaro <rcammaro@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 13:41:04 by rcammaro          #+#    #+#             */
-/*   Updated: 2021/04/07 18:49:40 by rcammaro         ###   ########.fr       */
+/*   Updated: 2021/04/08 13:57:27 by rcammaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <fcntl.h>
 # include <time.h>
 
-# define EPSILON 1.0e-05
+# define EPSILON 1.0e-10
 
 # define KEY_ESC 0xff1b
 # define KEY_N 0x006e
