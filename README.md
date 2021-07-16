@@ -2,19 +2,11 @@
 
 ![checker_side](images/checker_side.bmp)
 
-This project is an (insane) introduction to computer graphic proposed by [42](https://www.42.fr/).
+This project is an (insane) introduction to computer graphics proposed by [42](https://www.42.fr/).
 
-A raytracer written in C, from scratch.
+A raytracer written in C, from scratch. It makes use, though, of the [MiniLibX](https://www.google.com) library, that simplifies the interface with the X-Window.
 
-It makes use, though, of the [MiniLibX](https://www.google.com) library, that simplifies the interface with the X-Window.
-
-A scene containing one the following primitive shapes can be rendered:
-- sphere
-- plane
-- square
-- cylinder
-- triangle
-
+A scene containing the following primitive shapes can be rendered: sphere, plane, square, cylinder and triangle.  
 Multiple points of view (cameras) and multiple lightspots are handled.
 
 The bonus version of the project has the following additional features:
