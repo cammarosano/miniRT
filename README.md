@@ -12,7 +12,8 @@ Multiple points of view (cameras) and multiple lightspots are handled.
 The bonus version of the project has the following additional features:
 - multithreaded rendering
 - anti-aliasing (adaptive super-sampling)
-- reflexions
+- reflections
+- specular shine
 - normal disruption (wave effect)
 - checkerboard texture
 - rainbow texture
